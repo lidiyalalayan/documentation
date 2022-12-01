@@ -103,8 +103,8 @@ The root element of the widget’s component must spread the result of calling `
 - On the widget object of the `builder.tsx` file, the mentioned below properties must be defined and exported:
 
 	`// Widget's default props
-	WidgetBuilder.defaultProps = { ... };
-	WidgetBuilder.config = config;`
+		WidgetBuilder.defaultProps = { ... };
+		WidgetBuilder.config = config;`
 
 ## How to Make the Widget Available in the Public Mode?
 
