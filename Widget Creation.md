@@ -10,7 +10,7 @@ Each widget in Builder must perform the functionality of being dragged, configur
 
 ## How to Create a Widget?
 
-To create a new widget, the operation is handled inside FRONTEND/packages/ds/src/widgets folder where all Ucraft’s widgets are located.
+To create a new widget, the operation is handled inside `FRONTEND/packages/ds/src/widgets` folder where all Ucraft’s widgets are located.
 
 ℹ Note, that all the folder names must be in PascalCase. 
 
@@ -18,206 +18,206 @@ To create a new widget, the operation is handled inside FRONTEND/packages/ds/src
 
 To create a **MyWidget** widget, the following files are required:
 
-MyWidget.builder.tsx
+`MyWidget.builder.tsx`
 
-In builder.tsx the behavior of the widget is set for the builder mode.
+In `builder.tsx` the behavior of the widget is set for the builder mode.
 
-MyWidget.config.ts
+`MyWidget.config.ts`
 
-Config variable must be a type of ConfigType.
+`Config` variable must be a type of `ConfigType`.
 
 Properties required for widget configuration are the following:
 
-hasUiElement indicates whether the widget has a UI element.
+- `hasUiElement` indicates whether the widget has a UI element.
 
-defaultChildren holds the microelements/children data of the widget.
+- `defaultChildren` holds the microelements/children data of the widget.
 
-style relates to the Style tab, meaning that the style settings that are shown to the user allow the widget to have such features as padding, margin, etc.
+- `style` relates to the Style tab, meaning that the style  that are shown to the user allow the widget to have such features as padding, margin, etc.
 
-settings relates to the Settings tab.
+- `settings` relates to the Settings tab.
 
-content refers to the Content tab.
+- `content` refers to the Content tab.
 
-creation refers to the options visible to the user while creating a UI Element of the widget.
+- `creation` refers to the options visible to the user while creating a UI Element of the widget.
 
-icon is the icon that appears next to each widget on the Left Panel of the Builder.
+- `icon` is the icon that appears next to each widget on the Left Panel of the Builder.
 
-params relates to the default parameters, such as text and size of the widget.
+- `params` relates to the default parameters, such as text and size of the widget.
 
-defaultVariantsStyle refers to the widget's default styles, such as the background color.
+- `defaultVariantsStyle` refers to the widget's default styles, such as the background color.
 
-defaultContent relates to the default data structure of the widget whenever it needs to be UI elements.
+- `defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.
 
-ℹ Note, Config variable must be exported as default.
+ℹ Note, `Config` variable must be exported as default.
 
-export default config;
+`export default config;`
 
-ℹ Note, Prefix must be exported from the “MyWidget” widget.
+ℹ Note, Prefix must be exported from the **MyWidget** widget.
 
-export const prefix = widgetPrefix.X;
+`export const prefix = widgetPrefix.X;`
 
-MyWidget.public.tsx
+`MyWidget.public.tsx`
 
-In public.tsx the behavior of the widget is set for the public (published) mode.
+In `public.tsx` the behavior of the widget is set for the public (published) mode.
 
-MyWidget.styles.ts
+`MyWidget.styles.ts`
 
-The widget's constant styling is set here, and the user cannot alter it. For instance, cursor: pointer; meaning whenever hovered over the widget the cursor becomes a pointer.
+The widget's constant styling is set here, and the user cannot alter it. For instance, `cursor: pointer;` meaning whenever hovered over the widget the cursor becomes a pointer.
 
-MyWidget.types.ts
+`MyWidget.types.ts`
 
 The custom types of the widget are set here.
 
-MyWidget.view.tsx
+`MyWidget.view.tsx`
 
-The shared behaviors of the builder.tsx and the public.tsx must be included in the view.tsx, meaning that it is responsible for rendering the widget valid in both public and view modes.
+The shared behaviors of the `builder.tsx` and the `public.tsx` must be included in the `view.tsx`, meaning that it is responsible for rendering the widget valid in both public and view modes.
 
-MyWidget.index.ts
+`MyWidget.index.ts`
 
-All types and components that must be exported from the widget are located in MyWidget.index.ts.
+All types and components that must be exported from the widget are located in `MyWidget.index.ts`.
 
 ### Step 2
 
-After all is set, the widget must be exported inindex.ts inside the packages/ds/src/widgets/index.ts path since it is essential for the application to render the widget. 
+After all is set, the widget must be exported in `index.ts` inside the `packages/ds/src/widgets/index.ts` path since it is essential for the application to render the widget. 
 
 ### Step 3
 
-The widget types must be exported in packages/ds/src/constants.tsunder the WIDGET_TYPES as follows:
+The widget types must be exported in `packages/ds/src/constants.ts` under the `WIDGET_TYPES` as follows:
 
-MyWidget = 'myWidget'
+`MyWidget = 'myWidget'`
 
 ### Step 4
 
-Afterward, the widget configurations must be inserted inside widgetConfigs.ts from packages/ds/src/widgets/widgetConfigs.ts path as **MyWidget: MyWidgetConfig.ts , where **MyWidget** stands for the name of the widget.
+Afterward, the widget configurations must be inserted inside `widgetConfigs.ts` from `packages/ds/src/widgets/widgetConfigs.ts` path as `MyWidget: MyWidgetConfig.ts` , where **MyWidget** stands for the name of the widget.
 
 ### Step 5
 
-The next important step is to make the widget available in the widget menu from the Left Panel of the Builder. In thepackages/builder/src/pages/VisualEditor/components/Widgets/index.tsx folder under the categories available, the WIDGET_TYPE.MyWidget must be inserted. For example, under the key: 'basic',.
+The next important step is to make the widget available in the widget menu from the Left Panel of the Builder. In the `packages/builder/src/pages/VisualEditor/components/Widgets/index.tsx` folder under the categories, the `WIDGET_TYPE.MyWidget` must be inserted. For example, under the `key: 'basic',`.
 
 ### Step 6
 
-The root element of the widget’s component must spread the result of calling appendSystemProps on the root element of the widget. The Root element of the widget refers to the actual element that the user can change in VisualEditor/BuilderMode.
+The root element of the widget’s component must spread the result of calling `appendSystemProps` on the root element of the widget. The Root element of the widget refers to the actual element that the user can change in VisualEditor/BuilderMode.
 
-return <RootElement {...appendSystemProps()}>{children}</RootElement>;
+`return <RootElement {...appendSystemProps()}>{children}</RootElement>;`
 
-On the widget object of the builder.tsx file, the mentioned below properties must be defined and exported:
+- On the widget object of the `builder.tsx` file, the mentioned below properties must be defined and exported:
 
-// Widget's default props
+`// Widget's default props
 WidgetBuilder.defaultProps = { ... };
-WidgetBuilder.config = config;
+WidgetBuilder.config = config;`
 
 ## How to Make the Widget Available in the Public Mode?
 
-To make the widget available in the public mode, the corresponding component needs to be put in packages/public/components/PageLayout.tsx inside the elements variable as follows:
+To make the widget available in the public mode, the corresponding component needs to be put in `packages/public/components/PageLayout.tsx` inside the `elements` variable as follows:
 
-[WIDGET_TYPE.MyWidget]: MyWidgetPublic,
+`[WIDGET_TYPE.MyWidget]: MyWidgetPublic,`
 
 ## Widget Instance Configuration
 
-As soon as the widget is dropped on the crafting area, the widget becomes an **Instance**, meaning an independent unit of a widget with particular settings.
+As soon as the widget is dropped onto the crafting area, the widget becomes an **Instance**, meaning an independent unit of a widget with particular settings.
 
 Each Instance has unique identifiers:
 
-hash
+`hash`
 
 Unique for each instance of a widget (Block, Row, Column and Button (ex.), Label, Icon).
 
-type
+`type`
 
-Identifies the widget type. For example: type: "gallery"
+Identifies the widget type. For example: `type: "gallery"`
 
-parentHash
+`parentHash`
 
 Identifies the **Parent** of the widget. For example: 
 
-parentHash: "__iHhez-GTc2LO-9LZ3qmOP".
+`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`.
 
-children
+`children`
 
 Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:
 
-    children: [
+    `children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
-      "__J4Yzjt0l1RlcEqa4eEWdg",
+      "__J4Yzjt0l1RlcEqa4eEWdg",`
 
 uiElementId
 
-Shows UI element used for the widget. For example: uiElementId: "2", where the number identifies the **Id** of the UI element used.
+Shows UI element used for the widget. For example: `uiElementId: "2"`, where the number identifies the **Id** of the UI element used.
 
-key
+`key`
 
-key is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple children of the same type. 
+`key` is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple `children` of the same type. 
 
-variantsStyles
+`variantsStyles`
 
-variantsStyles contains all styles applied to a widget. variantsStyle is an array with multiple entries, since applied styles can differ according to a condition (like different breakpoints or css states). Each entry can contain:
+`variantsStyles` contains all styles applied to a widget. `variantsStyle` is an array with multiple entries, since applied styles can differ according to a condition (like different breakpoints or css states). Each entry can contain:
 
-breakpointId: the breakpoint id.
+`breakpointId:` the breakpoint id.
 
-cssState: For example hover or normal state.
+`cssState:` For example hover or normal state.
 
-styles: the given styles to a widget. For example: styles: [{ type: width, value: "80vw" }]
+`styles:` the given styles to a widget. For example: `styles: [{ type: width, value: "80vw" }]`
 
 ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764).
 
-settings
+`settings`
 
-Located under **Params**, each widget can optionally have a settings key which is an object containing different kinds of settings specific for the widget. For example:
+Located under **Params**, each widget can optionally have a `settings` key which is an object containing different kinds of settings specific for the widget. For example:
 
-**Button** widget has a contentType property which specifies if it is only a label or a label with an icon.
+**Button** widget has a `contentType` property which specifies if it is only a label or a label with an icon.
 
-**Gallery** widget has an imagesPerRow property.
+**Gallery** widget has an `imagesPerRow` property.
 
-props
+`props`
 
-props attribute stores translatable text under **Params**. As an example, the label of the Button widget.
+`props` attribute stores translatable text under **Params**. As an example, the label of the Button widget.
 
-show
+`show`
 
 Enables developers to choose whether to display the widget and its children or not.
 
-showContentInParent
+`showContentInParent`
 
 Shows the content settings of the **Child** inside **Parent** widget.
 
-renderSection
+`renderSection`
 
 Used on **Children** to define the placement on the **Parent** widget.
 
-labelKey
+`labelKey`
 
-Labeling of the **Entity Crumb**. See as an example the Countdown widget which is using a Container widget, but users are seeing Number instead of Container in the **Entity Crumb**.
+Labeling of the **Entity Crumb**. See as an example the Countdown widget which is using a `Container` widget, but users are seeing `Number` instead of Container in the **Entity Crumb**.
 
-labelKey: ‘number’
+`labelKey: ‘number’`
 
-isMicroElement
+`isMicroElement`
 
-Prevents the user to drag and drop the widget outside the Parent widget in case of being true. This parameter is true for most of the Children widgets.
+Prevents the user to drag and drop the widget outside the Parent widget in case of being true. This parameter is `true` for most of the `Children` widgets.
 
-preventDrop
+`preventDrop`
 
-Prevents the drag and drop inside the widget. Not true for Container widget.
+Prevents the drag and drop inside the widget. Not `true` for Container widget.
 
-isReadOnly
+`isReadOnly`
 
-When a widget’s isReadOnly is true, the Content tab of the widget settings is not visible to user anymore. An example of this is Login Form, in which user should not be able to add extra fields to login form.
+When a widget’s `isReadOnly` is `true`, the `Content` tab of the widget settings is not visible to user anymore. An example of this is Login Form, in which user should not be able to add extra fields to login form.
 
-skipSelect
+`skipSelect`
 
-If the skipSelect is true, the widget can not be selected inside the visual editor. See the Contact Details widget as an example in which the user is not able to select Form and Form Item widgets.
+If the `skipSelect` is `true`, the widget can not be selected inside the visual editor. See the Contact Details widget as an example in which the user is not able to select Form and Form Item widgets.
 
 ## How to Add Micro Elements?
 
 To define **Micro Elements** (Children), the following hierarchy is used:
 
-Inside the config folder, there is the defaultChildren key. 
+Inside the config folder, there is the `defaultChildren` key. 
 
-If the widget needs to have **Children** the defaultChildren must be an array. 
+If the widget needs to have **Children** the `defaultChildren` must be an array. 
 
-Inside an array, every **Child** must have a type. For example, type: WIDGET_TYPES.Icon.
+Inside an array, every **Child** must have a `type`. For example, `type: WIDGET_TYPES.Icon`.
 
-params is used for adding parameters to the **Children** in particular cases.
+`params` is used for adding parameters to the **Children** in particular cases.
 
 ℹ The **Micro Elements** can also be nested inside **Children** widgets. An example of that particular case is the **Shipping Details Widget** which includes multiple nested **Row** and **Column** and **FormItem** nested inside each other.
 
@@ -607,44 +607,44 @@ Developers can compare a created small block with its corresponding saved JSON s
 
 Each time a widget instance is rendered, its parameters must be merged with those of the UI elements and widget.
 
-WidgetComponent is a valuable name for all the widgets. It has params with properties like:
+`WidgetComponent` is a valuable name for all the widgets. It has params with properties like:
 
-props includes all the translatable properties, for example, a text.
+- `props` includes all the translatable properties, for example, a text.
 
-settings includes style settings, for instance, the contentType specifies how the icon is positioned in relation to the label.
+- `settings` includes style settings, for instance, the `contentType` specifies how the icon is positioned in relation to the label.
 
 ℹ The order of the filled data must be:
 
-uiElementData
+1. `uiElementData`
 
-widget
+2. `widget`
 
 ℹ No data is needed for the widget's contentType to acquire the data from the UI element.
 
 ## Widget Instance Class Names
 
-uc-widget applies general styles to widgets. All the widgets in the layout must include this class name.
+- `uc-widget` applies general styles to widgets. All the widgets in the layout must include this class name.
 
-widget.hash is responsible for the custom widget instance.
+- `widget.hash` is responsible for the custom widget instance.
 
-.uc-widget-${widget.type}  is used to apply default styles to widgets which are specified by the widget type.
+- `uc-widget-${widget.type}`  is used to apply default styles to widgets which are specified by the widget type.
 
-stateClasses is responsible for hover or normal states of the widget.
+- `stateClasses` is responsible for hover or normal states of the widget.
 
-widgetStateClasses is responsible for applying styles in both guest and loggedIn states.
+- `widgetStateClasses` is responsible for applying styles in both guest and loggedIn states.
 
-widget.params is where the cssClass is provided. If there is no class name in the widget params, the widget prefix is used as a class name.
+- `widget.params` is where the `cssClass` is provided. If there is no class name in the widget `params`, the widget prefix is used as a class name.
 
- widget.params.key is where the microelement key must be provided.
+ - `widget.params.key` is where the microelement `key` must be provided.
 
-isUiElement class name is used with widgets that contain UI elements to also apply UI element styling to the widget.
+- `isUiElement` class name is used with widgets that contain UI elements to also apply UI element styling to the widget.
 
-elementContext.isCollectionBinding class name is used to apply the styles that bind to collection fields. For instance, this class name is used to bind a color field in the collection to the text color or background color of a widget on the collection item page.
+- `elementContext.isCollectionBinding` class name is used to apply the styles that bind to collection fields. For instance, this class name is used to bind a color field in the collection to the text color or background color of a widget on the collection item page.
 
 ## How to Make a Widget Compatible with SSR Render?
 
 Whenever an action is needed on the widgets with user data, it must be carried out dynamically. The following configurations must be configured:
 
-In LoginSubmitButton.public.tsx the useUserInfo is provided as, const { user, isLoadingUser } = useUserInfo();.
+1. In `LoginSubmitButton.public.tsx` the `useUserInfo` is provided as `const { user, isLoadingUser } = useUserInfo();`.
 
-Whenever the pages are being cashed, the query strings are being skipped. Everything that is connected to query string must be dynamic. If there is a need to add a query string for a widget, it must be carried out inside **.env** file in **proxy-v3**, adding widget name next to orderId of the RESERVED_QUERY_ARGS="orderId".
+2. Whenever the pages are being cashed, the query strings are skipped. Everything that is connected to query string must be dynamic. If there is a need to add a query string for a widget, it must be carried out inside **.env** file in **proxy-v3**, adding widget name next to `orderId` of the `RESERVED_QUERY_ARGS="orderId"`.
