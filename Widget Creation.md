@@ -200,7 +200,7 @@ Inside an array, every **Child** must have a `type`. For example, `type: WIDGET_
 >ℹ The **Micro Elements** can also be nested inside **Children** widgets. An example of that particular case is the **Shipping Details Widget** which includes multiple nested **Row** and **Column** and **FormItem** nested inside each other.
 
 Developers can compare a created small block with its corresponding saved JSON structure in the file below, where a **Countdown widget** and a **Title widget** are being added. Each of these is nested within its corresponding Column widget, which is contained within a Row widget, and the Row is contained within a Block widget. The block is made up of eight widgets, which are visible in the structure. Background colors are used to distinguish the widgets.
-![screenshot](file:///C:/Users/lidia/OneDrive/Desktop/screenshot1.png)
+![screenshot](https://ibb.co/gDnXwwZ)
 
 	[
 	  {
