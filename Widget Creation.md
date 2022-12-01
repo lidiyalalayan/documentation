@@ -22,10 +22,10 @@ To create a **MyWidget** widget, the following files are required:
 | Header      | Title       |
 | Paragraph   | Text        |
 
-	| G                |                            |
-	|-----------------------|-------------------------------------------------------------------------|
-	|`MyWidget.builder.tsx` | In `builder.tsx` the behavior of the widget is set for the builder mode.|
-	|`MyWidget.config.ts`   | `Config` variable must be a type of `ConfigType`.           |
+|  G                |                            |
+| ----------------------- |------------------------------------------------------------------------- |
+| `MyWidget.builder.tsx`  | In `builder.tsx` the behavior of the widget is set for the builder mode.|
+| `MyWidget.config.ts`    | `Config` variable must be a type of `ConfigType`.           |
 
 Properties required for widget configuration are the following:
 
