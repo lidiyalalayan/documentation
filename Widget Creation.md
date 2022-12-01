@@ -136,10 +136,10 @@ Identifies the **Parent** of the widget. For example:
 
 Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:
 
-    `children: [
+    children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
-      "__J4Yzjt0l1RlcEqa4eEWdg",`
+      "__J4Yzjt0l1RlcEqa4eEWdg",
 
 uiElementId
 
