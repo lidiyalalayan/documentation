@@ -74,10 +74,10 @@ Each Instance has unique identifiers:
 | `type`         | Identifies the widget type. For example: `type: "gallery"` |
 | `parentHash`   | Identifies the **Parent** of the widget. For example: <br>`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`. |
 | `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example: 
-<br> `children: [
+<br>children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
-      "__J4Yzjt0l1RlcEqa4eEWdg",`
+      "__J4Yzjt0l1RlcEqa4eEWdg",
 
 | `uiElementId`  | Shows UI element used for the widget. For example: `uiElementId: "2"`, where the number identifies the **Id** of the UI element used. |
 | `key`          | `key` is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple `children` of the same type. |
