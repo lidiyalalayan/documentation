@@ -2,7 +2,7 @@
 
 This document describes the Ucraft widget structure and guides the developers in the process of creating one.
 
->ℹ Note that this document must be read before creating a widget.
+>ℹ This document must be read before creating a widget.
 
 **Widget** is an alias for an independent, unique entity that is possible to use as part of the website built with Ucraft. 
 
@@ -12,7 +12,7 @@ Each widget in Builder must perform the functionality of being dragged, configur
 
 To create a new widget, the operation is handled inside `FRONTEND/packages/ds/src/widgets` folder where all Ucraft’s widgets are located.
 
-ℹ Note, that all the folder names must be in PascalCase. 
+>ℹ All the folder names must be in PascalCase. 
 
 ### Step 1 
 
@@ -48,11 +48,11 @@ Properties required for widget configuration are the following:
 
 - `defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.
 
-ℹ Note, `Config` variable must be exported as default.
+>ℹ `Config` variable must be exported as default.
 
 `export default config;`
 
-ℹ Note, Prefix must be exported from the **MyWidget** widget.
+>ℹ Prefix must be exported from the **MyWidget** widget.
 
 `export const prefix = widgetPrefix.X;`
 
@@ -159,7 +159,7 @@ Shows UI element used for the widget. For example: `uiElementId: "2"`, where the
 
 `styles:` the given styles to a widget. For example: `styles: [{ type: width, value: "80vw" }]`
 
-ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764).
+>ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764).
 
 `settings`
 
@@ -219,7 +219,7 @@ Inside an array, every **Child** must have a `type`. For example, `type: WIDGET_
 
 `params` is used for adding parameters to the **Children** in particular cases.
 
-ℹ The **Micro Elements** can also be nested inside **Children** widgets. An example of that particular case is the **Shipping Details Widget** which includes multiple nested **Row** and **Column** and **FormItem** nested inside each other.
+>ℹ The **Micro Elements** can also be nested inside **Children** widgets. An example of that particular case is the **Shipping Details Widget** which includes multiple nested **Row** and **Column** and **FormItem** nested inside each other.
 
 Developers can compare a created small block with its corresponding saved JSON structure in the file below, where a **Countdown widget** and a **Title widget** are being added. Each of these is nested within its corresponding Column widget, which is contained within a Row widget, and the Row is contained within a Block widget. The block is made up of eight widgets, which are visible in the structure. Background colors are used to distinguish the widgets.
 
@@ -613,13 +613,13 @@ Each time a widget instance is rendered, its parameters must be merged with tho
 
 - `settings` includes style settings, for instance, the `contentType` specifies how the icon is positioned in relation to the label.
 
-ℹ The order of the filled data must be:
+>ℹ The order of the filled data must be:
 
 1. `uiElementData`
 
 2. `widget`
 
-ℹ No data is needed for the widget's contentType to acquire the data from the UI element.
+>ℹ No data is needed for the widget's contentType to acquire the data from the UI element.
 
 ## Widget Instance Class Names
 
