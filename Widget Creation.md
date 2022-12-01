@@ -69,94 +69,29 @@ As soon as the widget is dropped onto the crafting area, the widget becomes an *
 
 Each Instance has unique identifiers:
 
-`hash`
-
-Unique for each instance of a widget (Block, Row, Column and Button (ex.), Label, Icon).
-
-`type`
-
-Identifies the widget type. For example: `type: "gallery"`
-
-`parentHash`
-
-Identifies the **Parent** of the widget. For example: 
-
-`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`.
-
-`children`
-
-Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:
-
-    `children: [
+| `hash`         | Unique for each instance of a widget (Block, Row, Column and Button (ex.), Label, Icon). |
+| :------------- | :----------------------------------------------------------------------------------|
+| `type`         | Identifies the widget type. For example: `type: "gallery"` |
+| `parentHash`   | Identifies the **Parent** of the widget. For example: <br>`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`. |
+| `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example: 
+<br> `children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
       "__J4Yzjt0l1RlcEqa4eEWdg",`
 
-uiElementId
-
-Shows UI element used for the widget. For example: `uiElementId: "2"`, where the number identifies the **Id** of the UI element used.
-
-`key`
-
-`key` is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple `children` of the same type. 
-
-`variantsStyles`
-
-`variantsStyles` contains all styles applied to a widget. `variantsStyle` is an array with multiple entries, since applied styles can differ according to a condition (like different breakpoints or css states). Each entry can contain:
-
-`breakpointId:` the breakpoint id.
-
-`cssState:` For example hover or normal state.
-
-`styles:` the given styles to a widget. For example: `styles: [{ type: width, value: "80vw" }]`
-
->ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764).
-
-`settings`
-
-Located under **Params**, each widget can optionally have a `settings` key which is an object containing different kinds of settings specific for the widget. For example:
-
-**Button** widget has a `contentType` property which specifies if it is only a label or a label with an icon.
-
-**Gallery** widget has an `imagesPerRow` property.
-
-`props`
-
-`props` attribute stores translatable text under **Params**. As an example, the label of the Button widget.
-
-`show`
-
-Enables developers to choose whether to display the widget and its children or not.
-
-`showContentInParent`
-
-Shows the content settings of the **Child** inside **Parent** widget.
-
-`renderSection`
-
-Used on **Children** to define the placement on the **Parent** widget.
-
-`labelKey`
-
-Labeling of the **Entity Crumb**. See as an example the Countdown widget which is using a `Container` widget, but users are seeing `Number` instead of Container in the **Entity Crumb**.
-
-`labelKey: ‘number’`
-
-`isMicroElement`
-
-Prevents the user to drag and drop the widget outside the Parent widget in case of being true. This parameter is `true` for most of the `Children` widgets.
-
-`preventDrop`
-
-Prevents the drag and drop inside the widget. Not `true` for Container widget.
-
-`isReadOnly`
-
-When a widget’s `isReadOnly` is `true`, the `Content` tab of the widget settings is not visible to user anymore. An example of this is Login Form, in which user should not be able to add extra fields to login form.
-
-`skipSelect`
-
-If the `skipSelect` is `true`, the widget can not be selected inside the visual editor. See the Contact Details widget as an example in which the user is not able to select Form and Form Item widgets.
+| `uiElementId`  | Shows UI element used for the widget. For example: `uiElementId: "2"`, where the number identifies the **Id** of the UI element used. |
+| `key`          | `key` is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple `children` of the same type. |
+| `variantsStyles`  | `variantsStyles` contains all styles applied to a widget. `variantsStyle` is an array with multiple entries, since applied styles can differ according to a condition (like different breakpoints or css states). Each entry can contain: <br>`breakpointId:` the breakpoint id. <br>`cssState:` For example hover or normal state. <br>`styles:` the given styles to a widget. For example: `styles: [{ type: width, value: "80vw" }]` <br>ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764). |
+| `settings`        | Located under **Params**, each widget can optionally have a `settings` key which is an object containing different kinds of settings specific for the widget. For example: <br> <ul><li>*Button** widget has a `contentType` property which specifies if it is only a label or a label with an icon.</li><li>**Gallery** widget has an `imagesPerRow` property.</li></ul> |
+| `props`           | `props` attribute stores translatable text under **Params**. As an example, the label of the Button widget. |
+| `show`            | Enables developers to choose whether to display the widget and its children or not. |
+| `showContentInParent` | Shows the content settings of the **Child** inside **Parent** widget. |
+| `renderSection`        | Used on **Children** to define the placement on the **Parent** widget. |
+| `labelKey`          | Labeling of the **Entity Crumb**. See as an example the Countdown widget which is using a `Container` widget, but users are seeing `Number` instead of Container in the **Entity Crumb**. <br>`labelKey: ‘number’` |
+| `isMicroElement`    | Prevents the user to drag and drop the widget outside the Parent widget in case of being true. This parameter is `true` for most of the `Children` widgets. |
+| `preventDrop`       | Prevents the drag and drop inside the widget. Not `true` for Container widget. |
+| `isReadOnly`        | When a widget’s `isReadOnly` is `true`, the `Content` tab of the widget settings is not visible to user anymore. An example of this is Login Form, in which user should not be able to add extra fields to login form. |
+| `skipSelect`         | If the `skipSelect` is `true`, the widget can not be selected inside the visual editor. See the Contact Details widget as an example in which the user is not able to select Form and Form Item widgets. |
 
 ## How to Add Micro Elements?
 
