@@ -201,7 +201,7 @@ Inside an array, every **Child** must have a `type`. For example, `type: WIDGET_
 
 Developers can compare a created small block with its corresponding saved JSON structure in the file below, where a **Countdown widget** and a **Title widget** are being added. Each of these is nested within its corresponding Column widget, which is contained within a Row widget, and the Row is contained within a Block widget. The block is made up of eight widgets, which are visible in the structure. Background colors are used to distinguish the widgets.
 
-![alt text](https://ibb.co/gDnXwwZ)
+![alt text](https://i.ibb.co/SKL100w/screenshot1.png)
 
 	[
 	  {
