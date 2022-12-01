@@ -102,9 +102,9 @@ The root element of the widget’s component must spread the result of calling `
 
 - On the widget object of the `builder.tsx` file, the mentioned below properties must be defined and exported:
 
-	// Widget's default props
+	`// Widget's default props
 	WidgetBuilder.defaultProps = { ... };
-	WidgetBuilder.config = config;
+	WidgetBuilder.config = config;`
 
 ## How to Make the Widget Available in the Public Mode?
 
@@ -136,10 +136,10 @@ Identifies the **Parent** of the widget. For example:
 
 Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:
 
-    children: [
+    `children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
-      "__J4Yzjt0l1RlcEqa4eEWdg",
+      "__J4Yzjt0l1RlcEqa4eEWdg",`
 
 uiElementId
 
