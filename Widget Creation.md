@@ -102,9 +102,9 @@ The root element of the widget’s component must spread the result of calling `
 
 - On the widget object of the `builder.tsx` file, the mentioned below properties must be defined and exported:
 
-`// Widget's default props
-WidgetBuilder.defaultProps = { ... };
-WidgetBuilder.config = config;`
+	// Widget's default props
+	WidgetBuilder.defaultProps = { ... };
+	WidgetBuilder.config = config;
 
 ## How to Make the Widget Available in the Public Mode?
 
@@ -223,385 +223,381 @@ Inside an array, every **Child** must have a `type`. For example, `type: WIDGET_
 
 Developers can compare a created small block with its corresponding saved JSON structure in the file below, where a **Countdown widget** and a **Title widget** are being added. Each of these is nested within its corresponding Column widget, which is contained within a Row widget, and the Row is contained within a Block widget. The block is made up of eight widgets, which are visible in the structure. Background colors are used to distinguish the widgets.
 
-
-``
-[
-  {
-    "type": "block",
-    "hash": "0f032d70-462a-4618-9363-95843c242bfd",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "padding-left",
-              "value": "10px"
-            },
-            {
-              "type": "padding-right",
-              "value": "10px"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(222, 223, 249)\",\"active\":true}]"
-            }
-          ]
-        }
-      ],
-      "settings": []
-    },
-    "children": ["8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"],
-    "layoutId": 22
-  },
-​
-  {
-    "type": "row",
-    "hash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "justify-content",
-              "value": "flex-start"
-            },
-            {
-              "type": "align-items",
-              "value": "center"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(201, 202, 243)\",\"active\":true}]"
-            },
-            {
-              "type": "padding-top",
-              "value": "10px"
-            },
-            {
-              "type": "padding-bottom",
-              "value": "10px"
-            },
-            {
-              "type": "padding-left",
-              "value": "10px"
-            },
-            {
-              "type": "padding-right",
-              "value": "10px"
-            },
-            {
-              "type": "margin-top",
-              "value": "10px"
-            },
-            {
-              "type": "margin-bottom",
-              "value": "10px"
-            },
-            {
-              "type": "margin-left",
-              "value": "10px"
-            },
-            {
-              "type": "margin-right",
-              "value": "10px"
-            }
-          ]
-        }
-      ],
-      "settings": {
-        "columnsCount": [
-          {
-            "breakpointId": "2",
-            "value": 2
-          }
-        ]
-      }
-    },
-    "children": [
-      "35887780-3587-41b5-aca3-9e9793388f59",
-      "44f76019-aacd-47c2-beb3-6b7bfb2a238c"
-    ],
-    "parentHash": "0f032d70-462a-4618-9363-95843c242bfd"
-  },
-​
-  {
-    "type": "column",
-    "hash": "35887780-3587-41b5-aca3-9e9793388f59",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "align-items",
-              "value": "center"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(172, 175, 247)\",\"active\":true}]"
-            }
-          ]
-        }
-      ],
-      "settings": {
-        "size": [
-          {
-            "breakpointId": "3",
-            "value": 6
-          }
-        ]
-      }
-    },
-    "children": ["7cde911f-a680-40c5-aff6-1f04be0094b7"],
-    "parentHash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"
-  },
-​
-  {
-    "type": "countdown",
-    "hash": "7cde911f-a680-40c5-aff6-1f04be0094b7",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": []
-        }
-      ],
-      "settings": {
-        "separators": {
-          "date": "slash",
-          "time": "colon"
-        },
-        "countdownType": "toDate",
-        "units": {
-          "years": true,
-          "months": true,
-          "days": true,
-          "hours": true,
-          "minutes": true,
-          "seconds": false
-        },
-        "endAction": "displayCounter"
-      },
-      "uiElementId": null,
-      "key": "cdn"
-    },
-    "children": [
-      "18fc2734-48fb-47b1-9b30-987ac2a3ba38",
-      "1a8e7ff4-8e2e-44b5-946d-bde91e21efee",
-      "6185e4a9-b61f-4cf6-a1c2-1115ec6c311f"
-    ],
-    "parentHash": "35887780-3587-41b5-aca3-9e9793388f59"
-  },
-​
-  {
-    "type": "container",
-    "hash": "18fc2734-48fb-47b1-9b30-987ac2a3ba38",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "justify-content",
-              "value": "center"
-            },
-            {
-              "type": "font-size",
-              "value": "4em"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(112, 139, 247)\",\"opacity\":1,\"active\":true}]"
-            }
-          ]
-        }
-      ],
-      "settings": [],
-      "isMicroElement": true,
-      "preventDrop": true,
-      "labelKey": "numbers"
-    },
-    "children": [],
-    "parentHash": "7cde911f-a680-40c5-aff6-1f04be0094b7"
-  },
-​
-  {
-    "type": "container",
-    "hash": "1a8e7ff4-8e2e-44b5-946d-bde91e21efee",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "justify-content",
-              "value": "center"
-            },
-            {
-              "type": "font-size",
-              "value": "20px"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(86, 116, 243)\",\"opacity\":1,\"active\":true}]"
-            }
-          ]
-        }
-      ],
-      "settings": [],
-      "isMicroElement": true,
-      "preventDrop": true,
-      "labelKey": "labels"
-    },
-    "children": [],
-    "parentHash": "7cde911f-a680-40c5-aff6-1f04be0094b7"
-  },
-​
-  {
-    "type": "column",
-    "hash": "44f76019-aacd-47c2-beb3-6b7bfb2a238c",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "align-items",
-              "value": "center"
-            },
-            {
-              "type": "background",
-              "value": "[{\"type\":\"solid\",\"value\":\"rgb(118, 123, 233)\",\"active\":true}]"
-            }
-          ]
-        }
-      ],
-      "settings": {
-        "size": [
-          {
-            "breakpointId": "3",
-            "value": 6
-          }
-        ]
-      }
-    },
-    "children": ["83f609ab-970d-4d01-9878-0b6e58ab9383"],
-    "parentHash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"
-  },
-​
-  {
-    "type": "title",
-    "hash": "83f609ab-970d-4d01-9878-0b6e58ab9383",
-    "params": {
-      "show": true,
-      "variantsStyles": [
-        {
-          "breakpointId": "3",
-          "cssState": "normal",
-          "styles": [
-            {
-              "type": "font-size",
-              "value": "40px"
-            },
-            {
-              "type": "line-height",
-              "value": "var(--h3-line-height)"
-            },
-            {
-              "type": "font-family",
-              "value": "var(--h3-font-family)"
-            },
-            {
-              "type": "font-weight",
-              "value": "var(--h3-font-weight)"
-            },
-            {
-              "type": "font-style",
-              "value": "var(--h3-font-style)"
-            },
-            {
-              "type": "letter-spacing",
-              "value": "var(--h3-letter-spacing)"
-            },
-            {
-              "type": "text-decoration",
-              "value": "var(--h3-text-decoration)"
-            },
-            {
-              "type": "text-align",
-              "value": "var(--h3-text-align)"
-            },
-            {
-              "type": "text-transform",
-              "value": "var(--h3-text-transform)"
-            },
-            {
-              "type": "color",
-              "value": "var(--h3-color)"
-            },
-            {
-              "type": "text-shadow-blur-radius",
-              "value": "var(--h3-text-shadow-blur-radius)",
-              "group": "text-shadow"
-            },
-            {
-              "type": "text-shadow-color",
-              "value": "var(--h3-text-shadow-color)",
-              "group": "text-shadow"
-            },
-            {
-              "type": "text-shadow-offset-x",
-              "value": "var(--h3-text-shadow-offset-x)",
-              "group": "text-shadow"
-            },
-            {
-              "type": "text-shadow-offset-y",
-              "value": "var(--h3-text-shadow-offset-y)",
-              "group": "text-shadow"
-            },
-            {
-              "type": "text-shadow-enabled",
-              "value": "var(--h3-text-shadow-enabled)",
-              "group": "text-shadow"
-            }
-          ]
-        }
-      ],
-      "settings": {
-        "level": "h3"
-      },
-      "uiElementId": null,
-      "key": "ttl",
-      "props": {
-        "link": {
-          "url": null,
-          "type": null,
-          "target": null
-        },
-        "text": "{\"blocks\":[{\"key\":\"Title8g4i7\",\"text\":\"Time Until End\",\"type\":\"header-three\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"
-      }
-    },
-    "parentHash": "44f76019-aacd-47c2-beb3-6b7bfb2a238c"
-  }
-]
-``
-
+	[
+	  {
+	    "type": "block",
+	    "hash": "0f032d70-462a-4618-9363-95843c242bfd",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "padding-left",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "padding-right",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(222, 223, 249)\",\"active\":true}]"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": []
+	    },
+	    "children": ["8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"],
+	    "layoutId": 22
+	  },
+	​
+	  {
+	    "type": "row",
+	    "hash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "justify-content",
+	              "value": "flex-start"
+	            },
+	            {
+	              "type": "align-items",
+	              "value": "center"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(201, 202, 243)\",\"active\":true}]"
+	            },
+	            {
+	              "type": "padding-top",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "padding-bottom",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "padding-left",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "padding-right",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "margin-top",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "margin-bottom",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "margin-left",
+	              "value": "10px"
+	            },
+	            {
+	              "type": "margin-right",
+	              "value": "10px"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": {
+	        "columnsCount": [
+	          {
+	            "breakpointId": "2",
+	            "value": 2
+	          }
+	        ]
+	      }
+	    },
+	    "children": [
+	      "35887780-3587-41b5-aca3-9e9793388f59",
+	      "44f76019-aacd-47c2-beb3-6b7bfb2a238c"
+	    ],
+	    "parentHash": "0f032d70-462a-4618-9363-95843c242bfd"
+	  },
+	​
+	  {
+	    "type": "column",
+	    "hash": "35887780-3587-41b5-aca3-9e9793388f59",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "align-items",
+	              "value": "center"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(172, 175, 247)\",\"active\":true}]"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": {
+	        "size": [
+	          {
+	            "breakpointId": "3",
+	            "value": 6
+	          }
+	        ]
+	      }
+	    },
+	    "children": ["7cde911f-a680-40c5-aff6-1f04be0094b7"],
+	    "parentHash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"
+	  },
+	​
+	  {
+	    "type": "countdown",
+	    "hash": "7cde911f-a680-40c5-aff6-1f04be0094b7",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": []
+	        }
+	      ],
+	      "settings": {
+	        "separators": {
+	          "date": "slash",
+	          "time": "colon"
+	        },
+	        "countdownType": "toDate",
+	        "units": {
+	          "years": true,
+	          "months": true,
+	          "days": true,
+	          "hours": true,
+	          "minutes": true,
+	          "seconds": false
+	        },
+	        "endAction": "displayCounter"
+	      },
+	      "uiElementId": null,
+	      "key": "cdn"
+	    },
+	    "children": [
+	      "18fc2734-48fb-47b1-9b30-987ac2a3ba38",
+	      "1a8e7ff4-8e2e-44b5-946d-bde91e21efee",
+	      "6185e4a9-b61f-4cf6-a1c2-1115ec6c311f"
+	    ],
+	    "parentHash": "35887780-3587-41b5-aca3-9e9793388f59"
+	  },
+	​
+	  {
+	    "type": "container",
+	    "hash": "18fc2734-48fb-47b1-9b30-987ac2a3ba38",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "justify-content",
+	              "value": "center"
+	            },
+	            {
+	              "type": "font-size",
+	              "value": "4em"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(112, 139, 247)\",\"opacity\":1,\"active\":true}]"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": [],
+	      "isMicroElement": true,
+	      "preventDrop": true,
+	      "labelKey": "numbers"
+	    },
+	    "children": [],
+	    "parentHash": "7cde911f-a680-40c5-aff6-1f04be0094b7"
+	  },
+	​
+	  {
+	    "type": "container",
+	    "hash": "1a8e7ff4-8e2e-44b5-946d-bde91e21efee",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "justify-content",
+	              "value": "center"
+	            },
+	            {
+	              "type": "font-size",
+	              "value": "20px"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(86, 116, 243)\",\"opacity\":1,\"active\":true}]"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": [],
+	      "isMicroElement": true,
+	      "preventDrop": true,
+	      "labelKey": "labels"
+	    },
+	    "children": [],
+	    "parentHash": "7cde911f-a680-40c5-aff6-1f04be0094b7"
+	  },
+	​
+	  {
+	    "type": "column",
+	    "hash": "44f76019-aacd-47c2-beb3-6b7bfb2a238c",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "align-items",
+	              "value": "center"
+	            },
+	            {
+	              "type": "background",
+	              "value": "[{\"type\":\"solid\",\"value\":\"rgb(118, 123, 233)\",\"active\":true}]"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": {
+	        "size": [
+	          {
+	            "breakpointId": "3",
+	            "value": 6
+	          }
+	        ]
+	      }
+	    },
+	    "children": ["83f609ab-970d-4d01-9878-0b6e58ab9383"],
+	    "parentHash": "8b21f8b9-9a1a-44c0-b319-bf8269a1c48d"
+	  },
+	​
+	  {
+	    "type": "title",
+	    "hash": "83f609ab-970d-4d01-9878-0b6e58ab9383",
+	    "params": {
+	      "show": true,
+	      "variantsStyles": [
+	        {
+	          "breakpointId": "3",
+	          "cssState": "normal",
+	          "styles": [
+	            {
+	              "type": "font-size",
+	              "value": "40px"
+	            },
+	            {
+	              "type": "line-height",
+	              "value": "var(--h3-line-height)"
+	            },
+	            {
+	              "type": "font-family",
+	              "value": "var(--h3-font-family)"
+	            },
+	            {
+	              "type": "font-weight",
+	              "value": "var(--h3-font-weight)"
+	            },
+	            {
+	              "type": "font-style",
+	              "value": "var(--h3-font-style)"
+	            },
+	            {
+	              "type": "letter-spacing",
+	              "value": "var(--h3-letter-spacing)"
+	            },
+	            {
+	              "type": "text-decoration",
+	              "value": "var(--h3-text-decoration)"
+	            },
+	            {
+	              "type": "text-align",
+	              "value": "var(--h3-text-align)"
+	            },
+	            {
+	              "type": "text-transform",
+	              "value": "var(--h3-text-transform)"
+	            },
+	            {
+	              "type": "color",
+	              "value": "var(--h3-color)"
+	            },
+	            {
+	              "type": "text-shadow-blur-radius",
+	              "value": "var(--h3-text-shadow-blur-radius)",
+	              "group": "text-shadow"
+	            },
+	            {
+	              "type": "text-shadow-color",
+	              "value": "var(--h3-text-shadow-color)",
+	              "group": "text-shadow"
+	            },
+	            {
+	              "type": "text-shadow-offset-x",
+	              "value": "var(--h3-text-shadow-offset-x)",
+	              "group": "text-shadow"
+	            },
+	            {
+	              "type": "text-shadow-offset-y",
+	              "value": "var(--h3-text-shadow-offset-y)",
+	              "group": "text-shadow"
+	            },
+	            {
+	              "type": "text-shadow-enabled",
+	              "value": "var(--h3-text-shadow-enabled)",
+	              "group": "text-shadow"
+	            }
+	          ]
+	        }
+	      ],
+	      "settings": {
+	        "level": "h3"
+	      },
+	      "uiElementId": null,
+	      "key": "ttl",
+	      "props": {
+	        "link": {
+	          "url": null,
+	          "type": null,
+	          "target": null
+	        },
+	        "text": "{\"blocks\":[{\"key\":\"Title8g4i7\",\"text\":\"Time Until End\",\"type\":\"header-three\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"
+	      }
+	    },
+	    "parentHash": "44f76019-aacd-47c2-beb3-6b7bfb2a238c"
+	  }
+	]
 
 ## Widget Instance Params Merge Logic with UI Elements and Widget Params
 
