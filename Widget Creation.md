@@ -38,7 +38,7 @@ Properties required for widget configuration are the following:
 `export default config;`
 >ℹ Prefix must be exported from the **MyWidget** widget.
 `export const prefix = widgetPrefix.X;` |
-| `MyWidget.public.tsx`         |In `public.tsx` the behavior of the widget is set for the public (published) mode. |
+ | `MyWidget.public.tsx`         | In `public.tsx` the behavior of the widget is set for the public (published) mode. |
 `MyWidget.styles.ts`
 
 The widget's constant styling is set here, and the user cannot alter it. For instance, `cursor: pointer;` meaning whenever hovered over the widget the cursor becomes a pointer.
