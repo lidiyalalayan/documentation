@@ -21,23 +21,7 @@ To create a **MyWidget** widget, the following files are required:
 | `MyWidget.builder.tsx`  | In `builder.tsx` the behavior of the widget is set for the builder mode.|
 | :---------------------- | :--------------------------------------------------------- |
 | `MyWidget.config.ts`    | `Config` variable must be a type of `ConfigType`.
-|                         | Properties required for widget configuration are the following: 
-<ul>
-  <li>`hasUiElement` indicates whether the widget has a UI element. - `defaultChildren` holds the microelements/children data of the widget.</li>
-  <li>`style` relates to the Style tab, meaning that the style  that are shown to the user allow the widget to have such features as padding, margin, etc.</li>
-  <li>`settings` relates to the Settings tab.</li>
-  <li>`content` refers to the Content tab.</li>
-  <li>`creation` refers to the options visible to the user while creating a UI Element of the widget.</li>
-  <li>`icon` is the icon that appears next to each widget on the Left Panel of the Builder.</li>
-  <li>`params` relates to the default parameters, such as text and size of the widget. </li>
-  <li>`defaultVariantsStyle` refers to the widget's default styles, such as the background color. </li>
-  <li>`defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.</li>
-</ul>  |
->ℹ `Config` variable must be exported as default.
-`export default config;`
->ℹ Prefix must be exported from the **MyWidget** widget.
-`export const prefix = widgetPrefix.X;` 
-
+|                         | Properties required for widget configuration are the following: <ul><li>`hasUiElement` indicates whether the widget has a UI element. - `defaultChildren` holds the microelements/children data of the widget.</li><li>`style` relates to the Style tab, meaning that the style  that are shown to the user allow the widget to have such features as padding, margin, etc.</li><li>`settings` relates to the Settings tab.</li><li>`content` refers to the Content tab.</li><li>`creation` refers to the options visible to the user while creating a UI Element of the widget.</li><li>`icon` is the icon that appears next to each widget on the Left Panel of the Builder.</li><li>`params` relates to the default parameters, such as text and size of the widget. </li><li>`defaultVariantsStyle` refers to the widget's default styles, such as the background color. </li><li>`defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.</li></ul> |
 | `MyWidget.public.tsx`     | In `public.tsx` the behavior of the widget is set for the public (published) mode. |
 `MyWidget.styles.ts`
 
