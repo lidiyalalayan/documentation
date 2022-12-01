@@ -73,7 +73,7 @@ Each Instance has unique identifiers:
 | :------------- | :----------------------------------------------------------------------------------|
 | `type`         | Identifies the widget type. For example: `type: "gallery"` |
 | `parentHash`   | Identifies the **Parent** of the widget. For example: <br>`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`. |
-| `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:<br>
+| `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:
       children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
