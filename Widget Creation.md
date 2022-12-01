@@ -73,12 +73,12 @@ Each Instance has unique identifiers:
 | :------------- | :----------------------------------------------------------------------------------|
 | `type`         | Identifies the widget type. For example: `type: "gallery"` |
 | `parentHash`   | Identifies the **Parent** of the widget. For example: <br>`parentHash: "__iHhez-GTc2LO-9LZ3qmOP"`. |
-| `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:<br>```
-children: [
+| `children`     | Includes hashes of all children (widgets) as an array inside the **Parent** widget. For example:<br>
+      children: [
       "__GEHMO5w-RXcg9QzUj6xoa",
       "__3Lm_9m5_tve8oPhHV7CYj",
       "__J4Yzjt0l1RlcEqa4eEWdg",
-```
+
 | `uiElementId`  | Shows UI element used for the widget. For example: `uiElementId: "2"`, where the number identifies the **Id** of the UI element used. |
 | `key`          | `key` is an identifier for the widget or its microelements, used instead of hash in Ui element style generator to store and generate styles separately for each widget/microelement. Use case for this unique identifier can be the complex widgets with multiple `children` of the same type. |
 | `variantsStyles`  | `variantsStyles` contains all styles applied to a widget. `variantsStyle` is an array with multiple entries, since applied styles can differ according to a condition (like different breakpoints or css states). Each entry can contain: <br>`breakpointId:` the breakpoint id. <br>`cssState:` For example hover or normal state. <br>`styles:` the given styles to a widget. For example: `styles: [{ type: width, value: "80vw" }]` <br>ℹ In case of setting different parameters for various breakpoints, the system generates **Entries** for each breakpoint. Find more information [here](https://ucraft.atlassian.net/wiki/spaces/Writers/pages/2642378764). |
