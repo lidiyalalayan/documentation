@@ -32,11 +32,11 @@ To create a **MyWidget** widget, the following files are required:
   <li>`params` relates to the default parameters, such as text and size of the widget. </li>
   <li>`defaultVariantsStyle` refers to the widget's default styles, such as the background color. </li>
   <li>`defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.</li>
-</ul>  
+</ul>  |
 >ℹ `Config` variable must be exported as default.
 `export default config;`
 >ℹ Prefix must be exported from the **MyWidget** widget.
-`export const prefix = widgetPrefix.X;` |
+`export const prefix = widgetPrefix.X;` 
 
 | `MyWidget.public.tsx`     | In `public.tsx` the behavior of the widget is set for the public (published) mode. |
 `MyWidget.styles.ts`
