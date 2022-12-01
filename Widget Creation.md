@@ -17,6 +17,10 @@ To create a new widget, the operation is handled inside `FRONTEND/packages/ds/sr
 ### Step 1 
 
 To create a **MyWidget** widget, the following files are required:
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
 	| G                |                            |
 	|-----------------------|-------------------------------------------------------------------------|
