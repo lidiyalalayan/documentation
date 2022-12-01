@@ -2,7 +2,7 @@
 
 This document describes the Ucraft widget structure and guides the developers in the process of creating one.
 
->ℹ Note that this document must be read before creating a widget.
+> ℹ Note that this document must be read before creating a widget.
 
 **Widget** is an alias for an independent, unique entity that is possible to use as part of the website built with Ucraft. 
 
