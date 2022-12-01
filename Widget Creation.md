@@ -20,16 +20,7 @@ To create a **MyWidget** widget, the following files are required:
 
 | `MyWidget.builder.tsx`  | In `builder.tsx` the behavior of the widget is set for the builder mode.|
 | ----------------------- |------------------------------------------------------------------------- |
-| `MyWidget.config.ts`    | `Config` variable must be a type of `ConfigType`.
-Properties required for widget configuration are the following:
-- `hasUiElement` indicates whether the widget has a UI element.
-- `defaultChildren` holds the microelements/children data of the widget.
-- `style` relates to the Style tab, meaning that the style  that are shown to the user allow the widget to have such features as padding, margin, etc.
-- `settings` relates to the Settings tab.
-- `content` refers to the Content tab.
-- `creation` refers to the options visible to the user while creating a UI Element of the widget.
-- `icon` is the icon that appears next to each widget on the Left Panel of the Builder.
-- `params` relates to the default parameters, such as text and size of the widget.
+| `MyWidget.config.ts`    | `Config` variable must be a type of `ConfigType`. Properties required for widget configuration are the following: - `hasUiElement` indicates whether the widget has a UI element. - `defaultChildren` holds the microelements/children data of the widget. - `style` relates to the Style tab, meaning that the style  that are shown to the user allow the widget to have such features as padding, margin, etc. - `settings` relates to the Settings tab. - `content` refers to the Content tab. - `creation` refers to the options visible to the user while creating a UI Element of the widget. - `icon` is the icon that appears next to each widget on the Left Panel of the Builder. - `params` relates to the default parameters, such as text and size of the widget.
 - `defaultVariantsStyle` refers to the widget's default styles, such as the background color.
 - `defaultContent` relates to the default data structure of the widget whenever it needs to be UI elements.
 >ℹ `Config` variable must be exported as default.
