@@ -1,7 +1,7 @@
 - ![Introduction](## Introduction)
 - ![How to Create a Widget?](##How to Create a Widget?)
 
-##Introduction
+## Introduction
 
 This document describes the Ucraft widget structure and guides the developers in the process of creating one.
 
