@@ -1,19 +1,5 @@
-<ol>
-    <li>
-        <a href="## Introduction"></a>
-    </li>
-    <li>
-        <a href="## How to Create a Widget?"></a>
-    </li>
-    <ol>
-        <li>
-            <a href="#Lnk"></a>
-        </li>
-        <li>
-            <a href="#Lnk"></a>
-        </li>
-    </ol>
-</ol>
+1. [Introduction](## Introduction)
+2. [How to Create a Widget?](## How to Create a Widget?)
 
 ## Introduction
 
