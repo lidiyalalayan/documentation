@@ -1,5 +1,5 @@
-1. [Introduction](## Introduction)
-2. [How to Create a Widget?](## How to Create a Widget?)
+- [Introduction](## Introduction)
+- [How to Create a Widget?](## How to Create a Widget?)
 
 ## Introduction
 
