@@ -1,3 +1,20 @@
+<ol>
+    <li>
+        <a href="## Introduction"></a>
+    </li>
+    <li>
+        <a href="## How to Create a Widget?"></a>
+    </li>
+    <ol>
+        <li>
+            <a href="#Lnk"></a>
+        </li>
+        <li>
+            <a href="#Lnk"></a>
+        </li>
+    </ol>
+</ol>
+
 ## Introduction
 
 This document describes the Ucraft widget structure and guides the developers in the process of creating one.
